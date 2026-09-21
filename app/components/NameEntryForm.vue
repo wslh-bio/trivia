@@ -11,8 +11,9 @@ function handleSubmit() {
 
 <template>
   <form class="name-entry" @submit.prevent="handleSubmit">
-    <h1>🧠 Trivia Time!</h1>
-    <p>Enter your name to start the quiz.</p>
+    <span class="eyebrow">UW–Madison</span>
+    <h1>Trivia Time</h1>
+    <p>Enter your name to begin the challenge.</p>
     <input
       v-model="name"
       type="text"
@@ -31,41 +32,76 @@ function handleSubmit() {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-width: 24rem;
+  max-width: 28rem;
   margin: 4rem auto;
-  padding: 2rem;
-  border-radius: 0.75rem;
+  padding: 2.25rem 2rem;
+  border-radius: 1rem;
   background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(197, 5, 12, 0.18);
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 18, 18, 0.08);
   text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #f8e8e9;
+  color: #9b0000;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
+  color: #121212;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1rem;
 }
 
 input {
   width: 100%;
-  padding: 0.65rem 0.85rem;
+  padding: 0.8rem 0.9rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  color: #121212;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
   box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c5050c;
+  box-shadow: 0 0 0 3px rgba(197, 5, 12, 0.15);
 }
 
 button {
-  padding: 0.65rem 1.5rem;
+  padding: 0.8rem 1.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
-  background: #4f46e5;
+  background: linear-gradient(180deg, #c5050c 0%, #a50209 100%);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 0.5rem 1rem rgba(197, 5, 12, 0.2);
 }
 
 button:hover {
-  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 0.75rem 1.25rem rgba(197, 5, 12, 0.22);
 }
 </style>

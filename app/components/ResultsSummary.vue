@@ -14,7 +14,8 @@ const emit = defineEmits<{ restart: [] }>()
 
 <template>
   <div class="results">
-    <h1>🎉 Nice work, {{ playerName }}!</h1>
+    <span class="eyebrow">Results</span>
+    <h1>Nice work, {{ playerName }}!</h1>
     <p class="score">You scored {{ score }} / {{ answers.length }}</p>
 
     <p v-if="isSubmitting" class="status">Submitting your results…</p>
@@ -37,30 +38,56 @@ const emit = defineEmits<{ restart: [] }>()
 
 <style scoped>
 .results {
-  max-width: 32rem;
+  max-width: 42rem;
   margin: 3rem auto;
-  padding: 2rem;
-  border-radius: 0.75rem;
+  padding: 2.25rem 2rem;
+  border-radius: 1rem;
   background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(197, 5, 12, 0.18);
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 18, 18, 0.08);
   text-align: center;
 }
 
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #9b0000;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #121212;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
 .score {
-  font-size: 1.25rem;
-  font-weight: 600;
+  margin: 1rem auto 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: #f8e8e9;
+  color: #9b0000;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .status {
-  color: #6b7280;
+  color: #4b5563;
+  margin-top: 1rem;
 }
 
 .status.error {
-  color: #dc2626;
+  color: #c5050c;
 }
 
 .status.success {
-  color: #16a34a;
+  color: #0f8a5f;
 }
 
 .answer-list {
@@ -69,48 +96,51 @@ const emit = defineEmits<{ restart: [] }>()
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   text-align: left;
 }
 
 .answer-list li {
-  padding: 0.65rem 0.85rem;
-  border-radius: 0.5rem;
-  border-left: 4px solid transparent;
-  background: #f9fafb;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.75rem;
+  border-left: 0.35rem solid transparent;
+  background: #f6f7f8;
 }
 
 .answer-list li.correct {
-  border-left-color: #22c55e;
+  border-left-color: #0f8a5f;
 }
 
 .answer-list li.incorrect {
-  border-left-color: #ef4444;
+  border-left-color: #c5050c;
 }
 
 .question {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
+  color: #121212;
 }
 
 .detail {
   display: block;
+  margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 button {
-  padding: 0.65rem 1.5rem;
+  padding: 0.8rem 1.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
-  background: #4f46e5;
+  background: linear-gradient(180deg, #c5050c 0%, #9b0000 100%);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(197, 5, 12, 0.18);
 }
 
 button:hover {
-  background: #4338ca;
+  box-shadow: 0 0.75rem 1.3rem rgba(197, 5, 12, 0.22);
 }
 </style>

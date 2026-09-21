@@ -116,63 +116,72 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .question-card {
-  max-width: 32rem;
+  max-width: 40rem;
   margin: 3rem auto;
   padding: 2rem;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(197, 5, 12, 0.15);
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 18, 18, 0.08);
 }
 
 .progress-track {
-  height: 0.5rem;
+  height: 0.7rem;
   border-radius: 999px;
-  background: #e5e7eb;
+  background: #e1e5e7;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
 
 .progress-fill {
   height: 100%;
-  background: #4f46e5;
+  background: linear-gradient(90deg, #c5050c 0%, #9b0000 100%);
   transition: width 0.1s linear, background-color 0.2s ease;
 }
 
 .progress-fill.urgent {
-  background: #dc2626;
+  background: linear-gradient(90deg, #9b0000 0%, #c5050c 100%);
 }
 
 .question-meta {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem;
   color: #6b7280;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .question-text {
   margin: 0 0 1.5rem;
+  color: #121212;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.3;
 }
 
 .options {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .option {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1rem;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
   font-size: 1rem;
   text-align: left;
-  background: #f3f4f6;
+  background: #f5f7f8;
   border: 2px solid transparent;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  color: #121212;
 }
 
 .option:hover:not(:disabled) {
-  background: #e5e7eb;
+  background: #edf1f3;
+  transform: translateY(-1px);
 }
 
 .option:disabled {
@@ -183,21 +192,23 @@ onBeforeUnmount(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 999px;
   background: #fff;
-  font-weight: 600;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  color: #9b0000;
+  font-weight: 800;
   flex-shrink: 0;
 }
 
 .option.correct {
-  background: #dcfce7;
-  border-color: #22c55e;
+  background: #ebf8f1;
+  border-color: #0f8a5f;
 }
 
 .option.incorrect {
-  background: #fee2e2;
-  border-color: #ef4444;
+  background: #feeceb;
+  border-color: #c5050c;
 }
 </style>

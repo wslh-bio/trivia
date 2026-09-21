@@ -68,55 +68,88 @@ function restart() {
 
 <template>
   <div class="app-shell">
-    <NameEntryForm v-if="stage === 'name'" @start="startQuiz" />
+    <main class="content">
+      <NameEntryForm v-if="stage === 'name'" @start="startQuiz" />
 
-    <p v-else-if="stage === 'loading'" class="status">Loading questions…</p>
+      <p v-else-if="stage === 'loading'" class="status">Loading questions…</p>
 
-    <QuestionCard
-      v-else-if="stage === 'quiz' && currentQuestion"
-      :key="currentIndex"
-      :question="currentQuestion"
-      :question-number="currentIndex + 1"
-      :total-questions="questions.length"
-      @answer="handleAnswer"
-    />
+      <QuestionCard
+        v-else-if="stage === 'quiz' && currentQuestion"
+        :key="currentIndex"
+        :question="currentQuestion"
+        :question-number="currentIndex + 1"
+        :total-questions="questions.length"
+        @answer="handleAnswer"
+      />
 
-    <ResultsSummary
-      v-else-if="stage === 'results'"
-      :player-name="playerName"
-      :answers="answers"
-      :score="score"
-      :is-submitting="isSubmitting"
-      :submit-error="submitError"
-      @restart="restart"
-    />
+      <ResultsSummary
+        v-else-if="stage === 'results'"
+        :player-name="playerName"
+        :answers="answers"
+        :score="score"
+        :is-submitting="isSubmitting"
+        :submit-error="submitError"
+        @restart="restart"
+      />
 
-    <p v-if="loadError && stage === 'name'" class="status error">{{ loadError }}</p>
+      <p v-if="loadError && stage === 'name'" class="status error">{{ loadError }}</p>
+    </main>
   </div>
 </template>
 
 <style>
+:root {
+  --uw-red: #c5050c;
+  --uw-dark-red: #9b0000;
+  --uw-black: #121212;
+  --uw-light-gray: #e1e5e7;
+  --uw-off-white: #f6f7f8;
+  --uw-success: #0f8a5f;
+  --uw-warning: #d97706;
+}
+
+html {
+  background: var(--uw-off-white);
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-  background: #f1f5f9;
-  color: #111827;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(180deg, #f7f7f7 0%, #eef1f3 100%);
+  color: var(--uw-black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
 }
 
 .app-shell {
   min-height: 100vh;
 }
 
+.content {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
 .status {
   text-align: center;
   margin-top: 4rem;
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .status.error {
   max-width: 24rem;
   margin: 1rem auto 0;
-  color: #dc2626;
+  color: var(--uw-red);
 }
+
 </style>
