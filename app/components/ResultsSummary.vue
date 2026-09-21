@@ -31,8 +31,6 @@ const emit = defineEmits<{ restart: [] }>()
         </span>
       </li>
     </ol>
-
-    <button type="button" @click="emit('restart')">Play Again</button>
   </div>
 </template>
 

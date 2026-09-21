@@ -1,8 +1,16 @@
 question,option_a,option_b,option_c,option_d,correct_answer,time_limit_seconds
-"What is the capital of France?",Paris,London,Berlin,Madrid,A,15
-"Which planet is known as the Red Planet?",Venus,Mars,Jupiter,Saturn,B,15
-"What is the largest mammal in the world?",Elephant,Blue Whale,Giraffe,Polar Bear,B,20
-"How many continents are there on Earth?",5,6,7,8,C,10
-"Who wrote 'Romeo and Juliet'?",Charles Dickens,Mark Twain,William Shakespeare,Jane Austen,C,15
-"What is the chemical symbol for gold?",Au,Ag,Gd,Go,A,10
-"Which ocean is the largest by surface area?",Atlantic,Indian,Arctic,Pacific,D,15
+"Beyond testing, what type of statewide network does the CDD coordinate to support emergency and public-health response?",ARLN,NIRC,WCLN,VPD,C,15
+"In PCR, what does the 5’ nuclease activity of Taq polymerase do?",Unwinds the double-stranded DNA template ahead of the polymerase,"Cleaves the probe as the polymerase extends, separating reporter dye from quencher and releasing fluorescence",Proofreads and removes mis-incorporated nucleotides at the 3′ end,Degrades primer-dimers so they don't compete for reagents,B,20
+Which testing method has an increased frequency of false positive results for Norovirus?,RT-PCR laboratory-developed test,MALDI-TOF,BioFire GI Panel,Enzyme immunoassay (EIA),C,20
+What national network focuses on molecular subtyping for foodborne disease surveillance?,PulseNet,LRN,NARMS,FoodNet,A,15
+Which diseases does WSLH test for as part of APHL's Vaccine Preventable Disease (VPD) Program as a regional reference center?,"Influenza, RSV, SARS-CoV-2, Adenovirus","Measles, Mumps, Rubella, VZV, H. influenzae, N. meningitidis, Enterovirus","Pertussis, Tetanus, Diphtheria, Polio","Hepatitis A, Hepatitis B, HPV, Rotavirus",B,20
+Which additional pathogen will be added to the VPD program this year?,Bordetella pertussis,Streptococcus pneumoniae,Corynebacterium diphtheriae,Poliovirus,C,15
+What does ELC stand for?,Emergency Laboratory Coordination Grant,Epidemiology and Laboratory Capacity Grant,Enhanced Laboratory Certification Grant,Epidemiologic Linkage and Communication Grant,B,15
+"What is meant by ""universal precautions""?",Only specimens from known infectious patients are handled with PPE,All human blood and certain body fluids are treated as if infectious for bloodborne pathogens,All laboratory work must be performed in a BSL-3 facility,Precautions that apply only during outbreak response activities,B,20
+Under which programs does the WSLH serve as a regional reference center?,"ARLN, NIRC, VPD, PSN","PulseNet, FoodNet, NARMS, CaliciNet","NEDSS, NHSN, NNDSS, WEDSS","CLIA, CAP, ISO, TNI",A,15
+How often does Erika send out Wisconsin Laboratory Surveillance Reports sharing clinical laboratory testing data?,Daily,Weekly,Bi-weekly,Monthly,C,15
+What is the correct UN number for labeling a Category B shipment?,UN2814,UN3373,UN3291,UN1845,B,15
+How many different Syphilis tests does Serology perform?,1,2,3,5,C,15
+How many different PT (proficiency testing) programs does CDD participate in?,29,41,59,73,C,15
+What does CLIA stand for?,Clinical Laboratory Improvement Amendments,Certified Laboratory Inspection Authority,Clinical Licensure and Instrument Accreditation,Central Laboratory Information Act,A,15
+What is the best Holloween movie?,"The 1999 cinematic masterpiece, The Mummy, with Brendan Fraser and Rachel Weisz",,,,A,15

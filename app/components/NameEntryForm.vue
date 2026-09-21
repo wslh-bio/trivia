@@ -11,8 +11,9 @@ function handleSubmit() {
 
 <template>
   <form class="name-entry" @submit.prevent="handleSubmit">
-    <span class="eyebrow">UW–Madison</span>
-    <h1>Trivia Time</h1>
+    <img class="logo" src="/wslh_logo_white.svg" alt="Wisconsin State Laboratory of Hygiene University of Wisconsin Madison">
+    <AnimatedFlaskLogo class="flask" role="img" aria-label="Mr. Flask" />
+    <h2>2026 PHL Appreaciation Trivia</h2>
     <p>Enter your name to begin the challenge.</p>
     <input
       v-model="name"
@@ -42,25 +43,25 @@ function handleSubmit() {
   text-align: center;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: #f8e8e9;
-  color: #9b0000;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.logo {
+  display: block;
+  width: min(19rem, 100%);
+  height: auto;
+  margin-bottom: 0.25rem;
 }
 
-h1 {
+.flask {
+  display: block;
+  width: min(8rem, 100%);
+  height: auto;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
   margin: 0;
   color: #121212;
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  line-height: 1.1;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
 }
 
 p {
