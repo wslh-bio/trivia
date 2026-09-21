@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Needed to access secrets scoped to the github-pages environment
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v7
