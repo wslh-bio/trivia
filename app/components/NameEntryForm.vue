@@ -13,7 +13,7 @@ function handleSubmit() {
   <form class="name-entry" @submit.prevent="handleSubmit">
     <img class="logo" src="/wslh_logo_white.svg" alt="Wisconsin State Laboratory of Hygiene University of Wisconsin Madison">
     <AnimatedFlaskLogo class="flask" role="img" aria-label="Mr. Flask" />
-    <h2>2026 PHL Appreaciation Trivia</h2>
+    <h2>2026 PHL Appreciation Trivia</h2>
     <p>Enter your name to begin the challenge.</p>
     <input
       v-model="name"
